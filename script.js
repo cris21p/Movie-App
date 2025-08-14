@@ -17,7 +17,7 @@ function buscarPeliculas(query) {
             .then(res => res.json())
             .then(fullMovie => {
               const plot = fullMovie.Plot || 'Sin descripción.';
-              const plotLimit = 150;
+              const plotLimit = 100;
               const plotShort = plot.length > plotLimit ? plot.substring(0, plotLimit) + "..." : plot;
               movi.innerHTML += `
                 <div class="movi-card">
