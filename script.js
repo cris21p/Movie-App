@@ -31,7 +31,7 @@ function buscarPeliculas(query) {
               movi.innerHTML += `
                 <div class="movi-card">
                   <div>
-                    <img src="${movie.Poster !== "N/A" ? movie.Poster : 'https://via.placeholder.com/200x300?text=Sin+imagen'}" alt="${movie.Title}">
+                    <img src="${movie.Poster}" alt="${movie.Title}">
                   </div>
                   <h3 class="movie-title">${movie.Title}</h3>
                   <p class="movie-year">${movie.Year}</p>
