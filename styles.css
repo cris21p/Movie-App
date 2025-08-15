@@ -46,6 +46,7 @@ body{
     border-radius: 8px;
     border: 2px solid transparent;
     width: 150px;
+    margin-right: 20px;
 }
 
 .nv-bt{
@@ -64,7 +65,7 @@ body{
 /*----------------------------------*/
 
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +73,9 @@ body{
     margin: auto;
     width: 100%;
     background-color: #76afff;
-    min-height: 100vh;
+    min-height: 92.8vh;
+    container-type: inline-size;
+    container-name: gri;
 }
 
 .movies-list{
@@ -107,7 +110,8 @@ body{
     border-radius: 8px;
     border: 2px solid transparent;
     box-shadow: 0px 2px 2px 3px #0000003b;
-    width: 250px;
+    margin-left:10px ;
+    width: 60%;
 }
 
 .bt-mv{
@@ -125,17 +129,19 @@ body{
 }
 
 .movi-card{
-    background: #575454;
+    background: var(--cl-bg--);
     border-radius: 8px;
     padding: 10px;
     text-align: center;
     box-shadow: 0px 0px 16px #000;
     width: 45%;
+    height: 450px;
 }
 
 .movi-card div{
     width: 100%;
-    height: 200px;
+    height: 40%;
+    margin-bottom: 8px;
 }
 
 .movi-card img{
@@ -151,11 +157,48 @@ body{
 }
 
 .movie-year {
-    color: #bbb;
+    color: #323131;
     font-size: 0.97rem;
 }
 
 .movi-card p{
-    color: #bfb8b8;
+    box-sizing: border-box;
+    color: #1a1a1a;
     font-size: 0.90rem;
+}
+
+/*------------container-main----------*/
+
+
+@container gri (min-width: 700px) {
+    .ct-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+
+    .ct-search form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ip-search{
+        width: 55%;
+    }
+
+    .movies-list{
+        gap: 40px;
+    }
+
+    .movi-card{
+        width: 20%;
+        padding: 20px;
+    }
+
+    .movi-card div{
+        height: 60%;
+    }
 }
