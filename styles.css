@@ -70,9 +70,9 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: #76afff;
     width: 100%;
-    height: auto;
+    background-color: #76afff;
+    min-height: 100vh;
 }
 
 .movies-list{
@@ -80,14 +80,13 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
     width: 100%;
     padding: 20px;
-    background-color: #76afff;
-    height: 82.8dvh auto;
+    box-sizing: border-box;
 }
 
 .ct-search{
