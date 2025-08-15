@@ -3,12 +3,21 @@ const API_KEY = "ffa0698f";
 const input = document.getElementById('input');
 const button = document.getElementById('button');
 const movi = document.getElementById('movi');
+const bt = document.getElementById('bt');
+const Search = document.getElementById('Search');
+
+const navSearch = document.querySelector('.search');
+const mianSearch = document.querySelector('.ct-search');
 
 function buscarPeliculas(query) {
   movi.innerHTML = "<p>Cargando...</p>";
   fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(query)}`)
     .then(res => res.json())
     .then(data => {
+
+      if (mianSearch) mianSearch.style.display = "none";
+      if (navSearch) navSearch.style.display = "flex";
+
       if (data.Response === "True") {
         movi.innerHTML = "";
         data.Search.forEach(movie => {
@@ -45,6 +54,14 @@ button.addEventListener('click', function(e) {
   e.preventDefault();
   const query = input.value.trim();
   if (query) {
+    buscarPeliculas(query);
+  }
+});
+
+bt.addEventListener('click', function(e) {
+  e.preventDefault();
+  const query = Search.value.trim();
+  if (query){
     buscarPeliculas(query);
   }
 });

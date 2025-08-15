@@ -72,6 +72,7 @@ body{
     margin: auto;
     background-color: #76afff;
     width: 100%;
+    height: auto;
 }
 
 .movies-list{
@@ -85,7 +86,8 @@ body{
     margin-bottom: 50px;
     width: 100%;
     padding: 20px;
-    height: 90dvh;
+    background-color: #76afff;
+    height: 82.8dvh auto;
 }
 
 .ct-search{
@@ -117,6 +119,10 @@ body{
     border-radius: 8px;
     border: none;
     margin-left: 10px;
+}
+
+.bt-mv:active{
+    background-color: #72a8f4;
 }
 
 .movi-card{
