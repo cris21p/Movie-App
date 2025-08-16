@@ -194,6 +194,7 @@ body{
 
     .ip-search{
         width: 55%;
+        margin-left: 12px;
     }
 
     .bt-mv{
@@ -214,3 +215,4 @@ body{
     }
 
 }
+
