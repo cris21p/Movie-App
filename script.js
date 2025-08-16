@@ -9,6 +9,21 @@ const Search = document.getElementById('Search');
 const navSearch = document.querySelector('.search');
 const mianSearch = document.querySelector('.ct-search');
 
+// Evento para buscar al hacer click
+button.addEventListener('click', function(e) {
+  e.preventDefault();
+  const query = input.value.trim();
+  if (!query) return
+    buscarPeliculas(query)
+})
+
+bt.addEventListener('click', function(e) {
+  e.preventDefault();
+  const query = Search.value.trim()
+  if (!query) return
+    buscarPeliculas(query)
+})
+
 function buscarPeliculas(query) {
   movi.innerHTML = "<p>Cargando...</p>";
   fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(query)}`)
@@ -31,7 +46,7 @@ function buscarPeliculas(query) {
               movi.innerHTML += `
                 <div class="movi-card">
                   <div>
-                    <img src="${movie.Poster !== "N/A" ? movie.Poster : 'https://via.placeholder.com/200x300?text=Sin+imagen'}" alt="${movie.Title}">
+                    <img src="${movie?.Poster}" alt="${movie.Title}" onerror="this.onerror=null;this.src='/img/Imagen.jpg';" >
                   </div>
                   <h3 class="movie-title">${movie.Title}</h3>
                   <p class="movie-year">${movie.Year}</p>
@@ -49,19 +64,3 @@ function buscarPeliculas(query) {
     });
 }
 
-// Evento para buscar al hacer click
-button.addEventListener('click', function(e) {
-  e.preventDefault();
-  const query = input.value.trim();
-  if (query) {
-    buscarPeliculas(query);
-  }
-});
-
-bt.addEventListener('click', function(e) {
-  e.preventDefault();
-  const query = Search.value.trim();
-  if (query){
-    buscarPeliculas(query);
-  }
-});
