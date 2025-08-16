@@ -5,7 +5,7 @@
 body{
     padding: 0;
     margin: 0;
-    --cl-bg--: #3D8BFD;
+    --cl-bg--: #2b7cf5;
     --cl-tx--: #eeeded;
 }
 
@@ -72,7 +72,6 @@ body{
     align-items: center;
     margin: auto;
     width: 100%;
-    background-color: #76afff;
     min-height: 92.8vh;
     container-type: inline-size;
     container-name: gri;
@@ -113,7 +112,7 @@ body{
 
 .ip-search{
     all:unset;
-    background-color: #eeeded;
+    background-color: #fff;
     padding: 3px;
     border-radius: 8px;
     border: 2px solid transparent;
@@ -137,7 +136,7 @@ body{
 }
 
 .movi-card{
-    background: var(--cl-bg--);
+    background: #518de1;
     border-radius: 8px;
     padding: 10px;
     text-align: center;

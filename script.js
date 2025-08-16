@@ -53,6 +53,7 @@ function buscarPeliculas(query) {
                   </div>
                   <h3 class="movie-title">${movie.Title}</h3>
                   <p class="movie-year">${movie.Year}</p>
+                  <p class="movie-type">${movie.Type === 'series' ? 'Serie/Novela' : 'Película'}</p>
                   <p class="movie-plot">${plotShort}</p>
                 </div>
               `;
