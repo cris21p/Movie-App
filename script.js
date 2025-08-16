@@ -46,7 +46,7 @@ function buscarPeliculas(query) {
               movi.innerHTML += `
                 <div class="movi-card">
                   <div>
-                    <img src="${movie?.Poster}" alt="${movie.Title}" onerror="this.onerror=null;this.src='/img/Imagen.jpg';" >
+                    <img src="${movie.Poster}" alt="${movie.Title}" onerror="this.onerror=null;this.src='/img/Imagen.jpg'" >
                   </div>
                   <h3 class="movie-title">${movie.Title}</h3>
                   <p class="movie-year">${movie.Year}</p>
