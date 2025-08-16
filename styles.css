@@ -196,6 +196,10 @@ body{
         width: 55%;
     }
 
+    .bt-mv{
+        width:20%;
+    }
+
     .movies-list{
         gap: 40px;
     }
@@ -208,4 +212,5 @@ body{
     .movi-card div{
         height: 60%;
     }
+
 }
