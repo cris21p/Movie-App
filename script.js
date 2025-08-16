@@ -25,7 +25,10 @@ bt.addEventListener('click', function(e) {
 })
 
 function buscarPeliculas(query) {
-  movi.innerHTML = "<p>Cargando...</p>";
+  movi.innerHTML =`
+        <div class="spinner-border" style="width: 4rem; height: 4rem;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>`;
   fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(query)}`)
     .then(res => res.json())
     .then(data => {
