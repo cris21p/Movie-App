@@ -194,7 +194,7 @@ body{
 }
 
 .peli-post{
-    width: 40%;
+    width: 80%;
     height: 100%;
 }
 
@@ -214,7 +214,14 @@ body{
 }
 
 .text p{
+    color: #c8c8c8;
     padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text , h1, h3, h4{
+    color: #100f0f;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -262,12 +269,14 @@ body{
     .perfil-ot{
         flex-direction: row;
         width: 80%;
-        height: 60dvh;
+        height: auto;
     }
 
     .peli-post{
-        width: 40%;
-        height: 28rem;
+        display: flex;
+        width: 50%;
+        height: 48rem;
+        margin-top: 80px;
         border-radius: 8px;
         margin-right: 27px;
     }
@@ -280,7 +289,7 @@ body{
 
     .text{
         width: 90%;
-        height: auto;
+        height: 50%;
     }
 }
 
