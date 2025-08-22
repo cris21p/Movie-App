@@ -9,6 +9,8 @@ body{
     --cl-tx--: #eeeded;
 }
 
+/*--------navbar----------*/
+
 .nav{
     display: flex;
     flex-direction: row;
@@ -62,19 +64,20 @@ body{
     background-color: #518de1;
 }
 
-/*----------------------------------*/
+/*---------------narbav end----------------*/
+
+/*---------------main selection----------------*/
 
 
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
-    margin: auto;
     width: 100%;
     min-height: 92.8vh;
     container-type: inline-size;
-    container-name: gri;
+    container-name: man;
 }
 
 .movies-list{
@@ -98,7 +101,7 @@ body{
     background-color: #1c5fe63b;
     width: 90%;
     height: 70px;
-    margin-bottom: 350px;
+    margin-top: 200px;
     border-radius: 18px;
 }
 
@@ -183,10 +186,46 @@ body{
     color: var(--cl-tx--);
 }
 
+.perfil-ot{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.peli-post{
+    width: 40%;
+    height: 100%;
+}
+
+.peli-post img{
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+
+.text{
+    width: 90%;
+    height: 50%;
+}
+
+.text p{
+    padding: 10px;
+}
+
+
+/*-----------main end----------*/
+
 /*------------container-main----------*/
 
 
-@container gri (min-width: 700px) {
+@container man (min-width: 700px) {
     .ct-search {
         display: flex;
         justify-content: center;
@@ -222,12 +261,29 @@ body{
         height: 60%;
     }
 
+
+    .perfil-ot{
+        flex-direction: row;
+        width: 80%;
+        height: 60dvh;
+    }
+
+    .peli-post{
+        width: 40%;
+        height: 28rem;
+        border-radius: 8px;
+        margin-right: 27px;
+    }
+
+    .peli-post img{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    .text{
+        width: 90%;
+        height: auto;
+    }
 }
-
-
-.perfil-ot{
-    display: none;
-}
-
-
 

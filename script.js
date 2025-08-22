@@ -6,7 +6,6 @@ const movi = document.getElementById('movi');
 const bt = document.getElementById('bt');
 const Search = document.getElementById('Search');
 const perfil = document.getElementById("perfil");
-const enlaces = document.getElementById("enlaces");
 
 const navSearch = document.querySelector('.search');
 const mianSearch = document.querySelector('.ct-search');
@@ -76,8 +75,8 @@ function buscarPeliculas(query) {
 }
 
   function mostrarPerfil(imdbID) {
-  movi.classList.add('perfil-ot');
-  perfil.classList.remove('perfil-ot');
+  movi.style.display="none";
+  perfil.style.display="flex";
   perfil.innerHTML = `
     <div class="spinner-border" style="width: 4rem; height: 4rem;" role="status">
       <span class="visually-hidden">Loading...</span>
@@ -90,11 +89,20 @@ function buscarPeliculas(query) {
       if(movie.Response === "True") {
         // Mostramos los detalles de la película
         perfil.innerHTML = `
-          <h2>${movie.Title} (${movie.Year})</h2>
-          <img src="${movie.Poster}" alt="Poster de ${movie.Title}">
-          <p><strong>Director:</strong> ${movie.Director}</p>
-          <p><strong>Actores:</strong> ${movie.Actors}</p>
-          <p><strong>Sinopsis:</strong> ${movie.Plot}</p>
+            <div class="peli-post">
+                <img src="${movie.Poster}" alt="Poster de ${movie.Title}">
+            </div>
+            <div class="text">
+                <h1 class="title">
+                    ${movie.Title} (${movie.Year})
+                </h1>
+                <h3>Sinopsis:</h3>
+                <p>${movie.Plot}</p>
+                <h4>Actores: </h4>
+                <p>${movie.Actors}</p>
+                <h4>Director:</h4>
+                <p>${movie.Director}</p>
+            </div>
         `;
         // Botón para volver a los resultados de búsqueda
         document.getElementById('volver').onclick = () => {
@@ -113,8 +121,8 @@ window.addEventListener('popstate', (event) => {
   if (path[1] === "pelicula" && path[2]) {
     mostrarPerfil(path[2]);
   } else {
-    perfil.classList.add('perfil-ot');
-    movi.classList.remove('perfil-ot');
+    movi.style.display="flex";
+    perfil.style.display="none";
   }
 });
 
