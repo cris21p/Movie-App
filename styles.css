@@ -5,8 +5,6 @@
 body{
     padding: 0;
     margin: 0;
-    --cl-bg--: #2b7cf5;
-    --cl-tx--: #eeeded;
 }
 
 /*--------navbar----------*/
@@ -18,7 +16,7 @@ body{
     align-items: center;
     width: 100%;
     height: 4.5rem;
-    background-color: var(--cl-bg--);
+    background-color: #111111;
 }
 
 .container__nav{
@@ -30,7 +28,7 @@ body{
 }
 
 .nav__home{
-    color: #141414;
+    color: #c8c8c8;
     font-size: 1.4rem;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -43,7 +41,7 @@ body{
 
 .nav__inp{
     all:unset;
-    background-color: #eeeded;
+    background-color: #d1d1d1;
     padding: 3px;
     border-radius: 8px;
     border: 2px solid transparent;
@@ -52,8 +50,8 @@ body{
 }
 
 .nv-bt{
-    background-color: #76afff;
-    box-shadow: 0px 2px 2px 2px #0000003b;
+    background-color: #7c7c7c;
+    box-shadow: 0px 2px 2px 2px #00000087;
     width: 70px;
     height: 32px;
     border-radius: 8px;
@@ -61,7 +59,7 @@ body{
 }
 
 .nv-bt:active{
-    background-color: #518de1;
+    background-color: #292727;
 }
 
 /*---------------narbav end----------------*/
@@ -72,10 +70,10 @@ body{
 .main {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     width: 100%;
     min-height: 92.8vh;
+    background-color: #2e2e2e;
     container-type: inline-size;
     container-name: man;
 }
@@ -98,7 +96,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1c5fe63b;
+    background-color: #141414;
     width: 90%;
     height: 70px;
     margin-top: 200px;
@@ -115,7 +113,7 @@ body{
 
 .ip-search{
     all:unset;
-    background-color: #fff;
+    background-color: #dedede;
     padding: 3px;
     border-radius: 8px;
     border: 2px solid transparent;
@@ -125,7 +123,7 @@ body{
 }
 
 .bt-mv{
-    background-color: #76afff;
+    background-color: #7c7c7c;
     box-shadow: 0px 2px 2px 2px #0000003b;
     width: 25%;
     height: 32px;
@@ -150,6 +148,7 @@ body{
 }
 
 .movi-card a{
+    color: #eeeded;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -183,7 +182,6 @@ body{
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--cl-tx--);
 }
 
 .perfil-ot{
@@ -254,11 +252,10 @@ body{
 
     .movi-card{
         width: 20%;
-        padding: 20px;
     }
 
     .movi-card div{
-        height: 60%;
+        height: 15%;
     }
 
 
